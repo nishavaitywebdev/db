@@ -1,0 +1,60 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="row">
+            <a class=" navbar-text-decor" href="#">
+                Profile
+            </a>
+            <a href="" ng-click = "model.updateUser(model.userId,model.user)" class="">
+              <span class="glyphicon glyphicon-ok white-glyphicon pull-right">
+              </span>
+            </a>
+            </div>
+        </div>
+    </div>
+</nav>
+    <div class="container-fluid padding-navbar">
+        <form>
+            <div class="form-group">
+                <label for="username">Username</label>
+                <input type="text" ng-model="model.user.username" class="form-control" id="username" placeholder="Username">
+            </div>
+            <div class="form-group">
+                <label for="email">Email address</label>
+                <input type="email" ng-model="model.user.email" class="form-control" id="email" placeholder="email Id">
+            </div>
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="text" ng-model="model.user.phone" class="form-control" id="phone" placeholder="phone">
+            </div>
+            <div class="form-group">
+                <label for="first-name">First Name</label>
+                <input type="text" ng-model="model.user.firstName" class="form-control" id="first-name" placeholder="First name">
+            </div>
+            <div class="form-group">
+                <label for="last-name">Last Name</label>
+                <input type="text" ng-model="model.user.lastName" class="form-control" id="last-name" placeholder="Lats Name">
+            </div>
+            <div class="form-group">
+                <label for="wallet">Wallet balance</label>
+                <input type="number" ng-model="model.user.moneyBalance" class="form-control" id="wallet" placeholder="wallet balance">
+            </div>
+        </form>
+
+        <a class="btn btn-primary btn-block"
+           href="#/user/{{model.userId}}/home">Search and Reserve Table in Restaurant</a>
+        <!--<a class="btn btn-danger  btn-block"-->
+           <!--ng-click="model.deleteUser(model.userId)">Delete</a>-->
+        <a class="btn btn-warning  btn-block"
+           href="#/user/{{model.userId}}/manageBookings">Manage Reservations</a>
+        <a class="btn btn-success  btn-block" ng-click="model.logout()"
+           href="#/login">Logout</a>
+    </div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="row">
+            <a href="#/user/{{model.userId}}">
+                <span class="glyphicon glyphicon-user white-glyphicon pull-right"></span>
+            </a>
+        </div>
+    </div>
+</nav>

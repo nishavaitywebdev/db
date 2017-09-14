@@ -1,0 +1,56 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container-fluid">
+                <div class="row">
+                        <a class=" navbar-text-decor" href="#">
+                                HOTEL MANIA
+                        </a>
+                        <!--<a href="#/login" class="">-->
+              <!--<span class="glyphicon glyphicon-user white-glyphicon pull-right">-->
+              <!--</span>-->
+                        <!--</a>-->
+                </div>
+        </div>
+        </div>
+</nav>
+<div class="container">
+                <!--<div ng-show="model.alert" class="alert alert-danger">-->
+                        <!--{{model.alert}}-->
+                <!--</div>-->
+        <h1>Register</h1>
+        <form ng-submit="model.createUser(model.user)"><input type="text"
+               ng-model="model.user.username"
+               class="form-control"
+               placeholder="username"/>
+        <input type="password"
+               ng-model="model.user.password"
+               class="form-control"
+               placeholder="password"/>
+        <input type="password"
+               ng-model="model.user.veryPassword"
+               class="form-control"
+               placeholder="verify password"/>
+        <input ng-model="model.user.email" type="email"
+               class="form-control"
+               placeholder="email"/>
+        <input ng-model="model.user.firstName" type="text"
+               class="form-control"
+               placeholder="First Name"/>
+        <input ng-model="model.user.lastName" type="text"
+               class="form-control"
+               placeholder="Last Name"/>
+                <!--<input ng-model="model.user.role" type="text"-->
+                       <!--class="form-control"-->
+                       <!--placeholder="Last Name" value="ADMIN" hidden/>-->
+        <input type="submit" class="btn btn-primary btn-block" value="Register"/></form><br>
+        <a class="btn btn-danger  btn-block"
+           href="#/login">Cancel</a>
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+        <div class="container-fluid">
+                <div class="row">
+                        <a href="#/user/{{model.userId}}">
+                                <span class="glyphicon glyphicon-user white-glyphicon pull-right"></span>
+                        </a>
+                </div>
+        </div>
+</nav>

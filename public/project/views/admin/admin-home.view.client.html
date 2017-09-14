@@ -1,0 +1,82 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="row">
+            <a class=" navbar-text-decor" href="#">
+                Admin Home
+            </a>
+            <!--<a href="" ng-click = "model.updateUser(model.userId,model.user)" class="">-->
+              <!--<span class="glyphicon glyphicon-ok white-glyphicon pull-right">-->
+              <!--</span>-->
+            <!--</a>-->
+        </div>
+    </div>
+    </div>
+</nav>
+<div class="container-fluid padding-navbar">
+
+    <label>Add Restaurant</label>
+    <form>
+        <div class="form-group">
+            <label for="name">name</label>
+            <input type="text" ng-model="model.restaurant.new_name" class="form-control" id="name" placeholder="Restaurant name">
+        </div>
+        <div class="form-group">
+            <label>City</label>
+            <select ng-model="model.restaurant.new_res_city">
+                <option ng-repeat="x in model.cities" value="{{x.id}}">City {{x.name}}</option>
+            </select>
+            <!--<input type="text" ng-model="model.restaurant.new_res_city" class="form-control" id="city" placeholder="city">-->
+        </div>
+        <button class="btn btn-success" ng-click="model.addRestaurants(model.restaurant)">Add Restaurant</button>
+    </form>
+    <br>
+    <label>Add table in Restaurant</label>
+    <form>
+        <div class="form-group">
+            <label>City</label>
+            <select ng-model="model.restaurant.city" ng-change="model.findRestaurantsByCity()">
+                <option ng-repeat="x in model.cities" value="{{x.id}}">City {{x.name}}</option>
+            </select>
+            <!--<input type="text" ng-model="model.restaurant.city" class="form-control" id="restaurant_city" placeholder="city">-->
+        </div>
+        <div class="form-group">
+            <label>name</label>
+            <select ng-model="model.restaurant.name">
+                <option ng-repeat="x in model.restaurantsInCity" value="{{x.rid}}">{{x.rname}}</option>
+            </select>
+            <!--<input type="text" ng-model="model.restaurant.name" class="form-control" id="restaurant_name" placeholder="Restaurant name">-->
+        </div>
+        <div class="form-group">
+            <label for="restaurant_table_seats">Seats</label>
+            <input type="text" ng-model="model.restaurant.seats" class="form-control" id="restaurant_table_seats" placeholder="seats">
+        </div>
+        <button class="btn btn-success" ng-click="model.addRestaurantTable(model.restaurant)">Add Restaurant Table</button>
+    </form>
+    <br>
+    <button class="btn btn-success" ng-click="model.getAllRestaurants()">Get All Restaurants</button>
+    <br>
+    <div class="div-website-list text-color-website-list">
+        <ul class="list-group">
+            <li ng-repeat="restaurant_each in model.restaurants" class="list-group-item">
+                <a href="#">{{restaurant_each.rname}}</a><span>,    </span>
+                    <a href="#">{{restaurant_each.cname}}</a>
+                <a ng-click = "model.deleteRestaurant(restaurant_each.rid)" class="">
+              <span class="glyphicon glyphicon-remove glyphicon pull-right">
+              </span>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <br>
+    <a class="btn btn-success  btn-block" ng-click="model.logout()"
+       href="#/login">Logout</a>
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="row">
+            <a href="#/user/{{model.userId}}">
+                <span class="glyphicon glyphicon-user white-glyphicon pull-right"></span>
+            </a>
+        </div>
+    </div>
+</nav>

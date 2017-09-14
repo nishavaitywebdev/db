@@ -1,0 +1,65 @@
+<nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container-fluid">
+        <div class="row">
+            <a class="" href="#/user/{{model.userId}}/city/{{model.cityId}}"><span class="glyphicon glyphicon-chevron-left white-glyphicon">
+              </span></a>
+            <a class=" navbar-text-decor" href="#">
+                RESTAURANT TABLE RESERVATION
+            </a>
+            <a href="#" class="">
+              <span class="fa fa-user fa-lg white-glyphicon pull-right">
+              </span>
+            </a>
+        </div>
+    </div>
+    </div>
+</nav>
+<div class="container-fluid padding-navbar">
+    <div>
+        <div class="row container">
+            <div class="col-xs-12 col-lg-6">
+                <h1 class="heading-color">Details</h1>
+                <h2>{{model.restaurantDetails.rname}}</h2>
+                <h3>{{model.restaurantDetails.cname}}</h3>
+                <h3>Token amount to make reservation: ${{model.restaurantDetails.tokenAmt}}</h3>
+            </div>
+            <div class="col-xs-12 col-lg-6">
+                <div>
+                    <div class="row">
+                        <div class="container">
+                            <br>
+                            <div ng-show="model.alert" class="alert alert-danger">
+                                {{model.alert}}
+                            </div>
+                            <br>
+                            <h2 class="heading-color">Tables</h2>
+                            <select ng-model="model.reservation.selectedTable">
+                                <option ng-repeat="x in model.restaurantTables" value="{{x.id}}">Table no. {{x.id}} with {{x.seats}} seats</option>
+                            </select>
+                        </div>
+                        <h1 class="heading-color">Select Date and Time</h1>
+
+                        <input type="datetime-local" min="" name="bdaytime" ng-model="model.reservation.reservationDate">
+
+                        <a type="button" class="btn btn-success"  ng-click="model.addReservation()">Agree and Make Reservation</a>
+                    </div>
+                    </div>
+                </div>
+            </div>
+        <div class="container-fluid padding-navbar">
+            <div class="col-lg-4 col-xs-12" style="padding:10px" ng-repeat="hotelImage in model.hotelDetails.img">
+                <img ng-src="{{hotelImage.l}}" height="200px" width="100%"/>
+            </div>
+        </div>
+        </div>
+    </div>
+</div>
+<nav class="navbar navbar-default navbar-fixed-bottom">
+    <div class="container-fluid">
+        <div class="row">
+            <a href="#/user/{{model.userId}}">
+                <span class="glyphicon glyphicon-user white-glyphicon pull-right"></span>
+            </a>
+        </div>
+    </div>
+</nav>

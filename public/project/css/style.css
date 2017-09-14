@@ -1,0 +1,206 @@
+input.form-control {
+    margin-bottom: 5px;
+}
+
+body {
+    padding-top: 36px;
+}
+.navbar-default{
+    background-color: black;
+}
+a:hover {
+    text-decoration: none;
+}
+
+.navbar-default .navbar-brand{
+    color:white;
+}
+.white-glyphicon{
+    color:white;
+    padding: 20px;
+}
+.div-website-list{
+    position: relative;
+    top:20px;
+}
+.text-color-website-list{
+    color: black;
+}
+#file-upload{
+    display: none;
+}
+.padding-navbar{
+    padding-top: 30px;
+    padding-bottom: 70px;
+}
+.glyph-margin{
+    float: right;
+}
+.verticalLine {
+    border-right: thin solid dimgrey;
+    height: 1000px;
+}
+.img-upload-button{
+    position: relative;
+    top: 34px;
+    left: -51px;
+    height: 33px;
+    width:100px;
+}
+.wrapper .glyphicon {
+    position: absolute;
+    top: 20px;
+    left: 40px;
+    font-size: 40px;
+    color: white;
+}
+.widget-container {
+    position: relative;
+}
+.widget-tag {
+    float: right;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+    z-index: 1000;
+    padding: 5px;
+    background-color: white;
+}
+.iframe-div{
+    width:100%;
+    height:400px;
+    frameborder:0px;
+    allowfullscreen:none;
+}
+.navbar-text-decor{
+    position: absolute;
+    color: white;
+    font-size: 18px;
+    padding: 15px;
+}
+.youtube-widget {
+    position: relative;
+    padding-bottom: 56.25%; /* 16:9 */
+    height: 0;
+}
+.youtube-widget iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+}
+#home-sec {
+
+
+    background: url(../assets/images/Boston.jpg) no-repeat 50% 50%;
+    background-attachment: fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    width: 100%;
+    display: block;
+    height: auto;
+    padding-top:190px;
+    min-height:500px;
+    color:#fff;
+}
+.comment-list{margin-bottom:40px !important;margin-left:0px !important;padding-left:0;}
+.comment-list,
+.comment-list .children{list-style:none;}
+.comment .comment-body{background-color:#ffffff;margin:0;overflow:hidden;padding:25px;margin-top:2em;padding-left:100px;position:relative;border:1px solid #E8E8E8;border-bottom:1px solid #DADADA;border-radius:4px;}
+.comment-list .children{margin-left:0px!important;padding-left:40px;border-left:1px solid #DADADA;background-repeat:no-repeat;background-position:left 20px;}
+.comment-list li.comment > div img.avatar{position:absolute;left:29px;top:29px;}
+#comment-form-title{font-size:24px;padding-bottom:10px;}
+.comment-author.vcard{font-size:12px;}
+.vcard .avatar{position:absolute;left:20px;top:29px;border-radius:2px;}
+.comment-metadata{font-size:11px;line-height:16px;margin-bottom:10px;}
+.comment-reply-link{float:right;}
+.form-allowed-tags code{word-wrap:break-word;white-space:inherit;}
+.comment-respond label{display:block;font-weight:normal;}
+.comment-respond .required{color:#C7254E;}
+#submit{font-size:12px;}
+.comment-navigation,
+.single .nav-links{overflow:hidden;margin-top:30px;}
+.comment-reply-title{font-size:14px;}
+.comment-reply-link{background:#C1C0C0;border:#C1C0C0;font-size:10px;text-transform:uppercase;}
+@media(max-width:767px){.post-inner-content{padding:20px 25px;}
+    .comment-list .children{padding-left:10px;}
+}
+.heading-color{
+    color: #285e8e
+}
+/*@import "compass/css3";*/
+
+.star-rating {
+    margin: 0;
+    padding: 0;
+    display: inline-block;
+}
+
+.star {
+    padding: 1px;
+    color: #ddd;
+    font-size: 20px;
+    text-shadow: .05em .05em #aaa;
+    list-style-type: none;
+    display: inline-block;
+    cursor: pointer;
+
+
+    /*&.filled {*/
+     /*color: #fd0;*/
+    /*}*/
+}
+
+/*&.readonly .star.filled {*/
+     /*color: #666;*/
+ /*}*/
+.ng-submitted.ng-invalid{
+    /*background-color: #a94442;*/
+    background-color: #ffa3a3;
+}
+.ng-submitted .ng-invalid{
+    background-color: #ffeded;
+}
+form{
+    padding: 3px;
+}
+.error{
+    color: #a94442;
+    margin-bottom: 20px;
+}
+.ng-invalid .error{
+    color: #a94442;
+    margin-bottom: 20px;
+}
+.hotel-item-box {
+    background-color: #f7f7f7;
+    border: 1px solid #DDD;
+    min-height: 202px;
+    -moz-transition: box-shadow .2s ease-in-out;
+    -o-transition: box-shadow .2s ease-in-out;
+    -webkit-transition: box-shadow .2s ease-in-out;
+    transition: box-shadow .2s ease-in-out;
+}
+.hotel-item-box {
+    display: block;
+    width: 100%;
+    height: 100%;
+    /*padding: 0 210px;*/
+    position: relative;
+    min-height: 200px;
+}
+.hotel-img {
+    margin-left: 0;
+}
+
+.hotel-info {
+    background-color: #f7f7f7;
+    padding: 7px 10px 7px 15px;
+    position: relative;
+    min-height: 225px;
+}
+
+
+
